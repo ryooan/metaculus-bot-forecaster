@@ -1,4 +1,4 @@
-# metaculus-bot-forecaster
+# Metaculus Bot Forecaster
 This repository is used to use a Github actions to automate the periodic execution of a Google colab notebook that makes LLM-powered forecasts in Metaculus' [AI benchmarking competition](https://www.metaculus.com/project/ai-benchmarking-pilot/).
 
 ### :rotating_light: :rotating_light: :rotating_light: Warning :rotating_light: :rotating_light: :rotating_light:
