@@ -31,7 +31,7 @@ jobs:
         with:
           notebook: "Ryan_LLM_Forecast_Bot.ipynb"
           isReport: False
-          poll: True
+          poll: False # not sure what exactly this does, but seemed to cause a perpetual loop when I used it
       - uses: actions/upload-artifact@v4
         if: always()
         with:
