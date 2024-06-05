@@ -16,6 +16,11 @@ jobs:
       - name: checkout repo content
         uses: actions/checkout@v3 # checkout the repository content to github runner
 
+      # using the below to 
+      - name: Install dependencies
+        run: |
+          python3 -m pip install papermill==2.4.0 ipykernel==6.15.2 nbformat==5.4.0 nbconvert==7.0.0 lxml[html_clean]
+
       - name: setup python
         uses: actions/setup-python@v4
       - uses: yaananth/run-notebook@v2
