@@ -1,0 +1,35 @@
+name: run Ryan_LLM_Forecast_Bot.ipynb
+
+# more info here: https://github.com/patrickloeber/python-github-action-template
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # every 6th hour
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+
+      - name: setup python
+        uses: actions/setup-python@v4
+      - uses: yaananth/run-notebook@v2
+        env:
+          RUNNER: ${{ toJson(runner) }}
+          SECRETS: ${{ toJson(secrets) }}
+          GITHUB: ${{ toJson(github) }}
+        with:
+          notebook: "Ryan_LLM_Forecast_Bot.ipynb"
+          isReport: False
+          poll: True
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: output
+          path: ${{ RUNNER.temp }}/nb-runner
+        env:
+          RUNNER: ${{ toJson(runner) }}
