@@ -1,6 +1,7 @@
 name: run Ryan_LLM_Forecast_Bot.ipynb
 
-# more info here: https://github.com/patrickloeber/python-github-action-template
+# general info here: https://github.com/patrickloeber/python-github-action-template
+# specific info about yaananth notebook runner and this workflow here: https://github.com/yaananth/run-notebook
 
 on:
   schedule:
