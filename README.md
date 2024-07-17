@@ -1,5 +1,5 @@
 # Metaculus Bot Forecaster
-This repository is used to use a Github actions to automate the periodic execution of a Google colab notebook that makes LLM-powered forecasts in Metaculus' [AI benchmarking competition](https://www.metaculus.com/project/ai-benchmarking-pilot/).
+This repository is used to use a Github actions to automate the periodic execution of a Google colab notebook that makes LLM-powered forecasts in Metaculus' [AI benchmarking competition](https://www.metaculus.com/project/aibq3/).
 
 ### :rotating_light: :rotating_light: :rotating_light: Warning :rotating_light: :rotating_light: :rotating_light:
 
@@ -46,7 +46,7 @@ Click on the `.github` folder, then click on the `schedule-BotPredict.yaml` file
 
 All of the secrets described in the Colab notebook need to be set in your Github repo. Navigate to "Settings" at the top of your repo, then "Secrets and variables" under "Security" on the left.
 
-Then, in the "Actions" section of secrets and variables click "New repository secret". Enter the name of each secret exactly as described in the Colab notebook, and the value of each secret in the box. When you're done it should look like this:
+Then, in the "Actions" section of secrets and variables click "New repository secret". Enter the name of each secret exactly as described in the Colab notebook, and the value of each secret in the box. When you're done it should look like this (with the exception of QUESTIONS_API_KEY, which has been depreciated and is not needed):
 
 ![Secrets](https://github.com/ryooan/metaculus-bot-forecaster/assets/45539871/03e2f4f1-fdee-4917-956f-efe47e4e7fe9)
 
